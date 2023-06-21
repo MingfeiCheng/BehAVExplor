@@ -1,0 +1,13 @@
+loguru
+sympy
+tsfresh
+pyyaml
+gensim
+scikit-learn
+pymoo==0.4.2.1
+pandas
+grpcio-tools==1.34.1
+tensorflow==2.5.0
+keras==2.4.0
+h5py==3.1.0
+similaritymeasures

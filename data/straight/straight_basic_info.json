@@ -1,0 +1,92 @@
+[
+  {
+    "name": "straight_straight",
+    "map": "SanFrancisco_correct",
+
+    "ego": {
+      "agent_type": "2e966a70-4a19-44b5-a5e7-64e00a7bc5de",
+      "start": {
+        "lane_id": "lane_626",
+        "offset": 10
+      },
+      "destination": {
+        "lane_id": "lane_626",
+        "offset": 230
+      }
+    },
+
+    "npcs": {
+      "waypoint": 4,
+      "npc_num": 6
+    },
+
+    "environment": {
+      "rain": 0,
+      "fog": 0,
+      "wetness": 0,
+      "cloudiness": 0,
+      "damage": 0,
+      "time": 0
+    }
+  },
+  {
+    "name": "straight_lane_change",
+    "map": "SanFrancisco_correct",
+
+    "ego": {
+      "agent_type": "2e966a70-4a19-44b5-a5e7-64e00a7bc5de",
+      "start": {
+        "lane_id": "lane_627",
+        "offset": 10
+      },
+      "destination": {
+        "lane_id": "lane_625",
+        "offset": 230
+      }
+    },
+
+    "npcs": {
+      "waypoint": 4,
+      "npc_num": 6
+    },
+
+    "environment": {
+      "rain": 0,
+      "fog": 0,
+      "wetness": 0,
+      "cloudiness": 0,
+      "damage": 0,
+      "time": 0
+    }
+  },
+  {
+    "name": "straight_right_change",
+    "map": "SanFrancisco_correct",
+
+    "ego": {
+      "agent_type": "2e966a70-4a19-44b5-a5e7-64e00a7bc5de",
+      "start": {
+        "lane_id": "lane_626",
+        "offset": 10
+      },
+      "destination": {
+        "lane_id": "lane_625",
+        "offset": 230
+      }
+    },
+
+    "npcs": {
+      "waypoint": 4,
+      "npc_num": 6
+    },
+
+    "environment": {
+      "rain": 0,
+      "fog": 0,
+      "wetness": 0,
+      "cloudiness": 0,
+      "damage": 0,
+      "time": 0
+    }
+  }
+]

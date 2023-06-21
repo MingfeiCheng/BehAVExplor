@@ -1,0 +1,27 @@
+test_method: becov
+total_test_time: 43200 # 12h
+ego_behavior: 0 # 0, 1, 2
+
+# path config
+output_path: /apollo/BehAVExplor/outputs/becov/s1
+scenario_basic_file: /apollo/BehAVExplor/data/junction/junction_basic_info.json
+scenario_route_file: /apollo/BehAVExplor/data/junction/junction_routes.json
+map_data: /apollo/BehAVExplor/data/map/SanFrancisco.json
+
+# simulator
+max_sim_time: 200
+lgsvl_map: SanFrancisco_correct
+apollo_map: SanFrancisco
+sim_mode: async # [tick or async]
+
+# model
+window_size: 10
+cluster_num: 10
+threshold_coverage: 0.4
+feature_resample: linear
+
+# fuzzer
+init_seed_size: 4
+offset_mutation: 12
+speed_mutation: 6
+child_size: 1
