@@ -179,7 +179,7 @@ class InputCorpus(object):
         is_novel = False
 
         corpus_feature_behavior, corpus_feature_trace = corpus_element.get_feature()
-        feedback_coverage, min_coverage_distance = self.coverage_model.feedback_coverage_behavior(corpus_feature_behavior, is_fail)
+        feedback_coverage, min_coverage_distance, _ = self.coverage_model.feedback_coverage_behavior(corpus_feature_behavior, is_fail)
 
         corpus_element.set_feedback(feedback_coverage, min_coverage_distance)
 
