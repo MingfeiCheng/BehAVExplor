@@ -25,7 +25,7 @@ cd /apollo/BehAVExplor
 sh prepare.sh
 ```
 
-Step 3: Compile BehAVExplor in the apollo container
+Step 3: Compile BehAVExplor inside the apollo container
 ```angular2html
 cd /apollo
 bazel build //BehAVExplor:main
@@ -46,14 +46,14 @@ map
     |- ...
 ```
 
-Step 6: Start Apollo and CyberRT bridge via
+Step 6: Start Apollo and CyberRT bridge inside the apollo container via
 ```angular2html
 cd /apollo
 bash scripts/bootstrap.sh
 bash scripts/bridge
 ```
 
-Step 7: Start LGSVL. Run in another terminal (current path is `/apollo` in apollo container)
+Step 7: Start LGSVL. Run in another terminal (current path is `/apollo` inside apollo container)
 ```angular2html
 ./bazel-bin/BehAVExplor/main --config=/apollo/BehAVExplor/configs/[scenario config yaml file]
 ```
