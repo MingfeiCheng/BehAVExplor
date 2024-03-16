@@ -19,9 +19,15 @@ Step 2: Clone BehAVExplor Project (BehAVExplor.zip) and unzip it under `/apollo`
     └── other apollo folders
     ```
 
-Step 3: Compile required files in the apollo container (current path is `/apollo`)
+Step 3: Install required Python dependency inside the apollo container
 ```angular2html
-sh BehAVExplor/prepare.sh
+cd /apollo/BehAVExplor
+sh prepare.sh
+```
+
+Step 3: Compile BehAVExplor inside the apollo container
+```angular2html
+cd /apollo
 bazel build //BehAVExplor:main
 ```
 
@@ -30,7 +36,24 @@ Step 4:  Config our custom LGSVL 2021.3 (Download from [link](https://drive.goog
 * Double click ~/lgsvl/simulator/simulator/simulator to open LGSVL Simulator
 * NOTE: [LGSVL](https://github.com/lgsvl/simulator) was closed, therefore, we will plan to extend this project to [CARLA](https://github.com/carla-simulator/carla).
 
-Step 5: Start Apollo & LGSVL. Run in another terminal (current path is `/apollo` in apollo container)
+Step 5: Install default map used by BehAVExplor by unzipping `BehavExplor/data/SanFrancisco.zip` at `/apollo/modules/map/data`. Your file structure should look like this
+```
+map
+|-data
+  |-SanFrancisco
+    |- base_map.bin
+    |- routing_map.bin
+    |- ...
+```
+
+Step 6: Start Apollo and CyberRT bridge inside the apollo container via
+```angular2html
+cd /apollo
+bash scripts/bootstrap.sh
+bash scripts/bridge
+```
+
+Step 7: Start LGSVL. Run in another terminal (current path is `/apollo` inside apollo container)
 ```angular2html
 ./bazel-bin/BehAVExplor/main --config=/apollo/BehAVExplor/configs/[scenario config yaml file]
 ```
