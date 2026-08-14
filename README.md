@@ -50,8 +50,10 @@ Step 6: Start Apollo and CyberRT bridge inside the apollo container via
 ```angular2html
 cd /apollo
 bash scripts/bootstrap.sh
-bash scripts/bridge
+bash scripts/bridge.sh
 ```
+
+The bridge will remain open until you stop it manually using Ctrl+C.
 
 Step 7: Start LGSVL. Run in another terminal (current path is `/apollo` inside apollo container)
 ```angular2html
